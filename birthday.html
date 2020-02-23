@@ -30,7 +30,7 @@
                     }else{
                         diffMonth = (12 - bM) + month - 1;
                         if(diffMonth == 1){
-                            bM = 12;
+                            bM = 13;
                         }else{
                             bM = month - 1;
                         }
@@ -71,7 +71,7 @@
                     }else{
                         diffMonth = month - bM;
                         if(diffMonth == 1){
-                            bM = 12;
+                            bM = 13;
                         }else{
                             bM = diffMonth - 1;
                         }
@@ -98,6 +98,8 @@
                         }else if(bM == 11){
                             days = 30;
                         }else if(bM == 12){
+                            days = 31;
+                        }else if(bM == 13){
                             days = 31;
                         }
                         diffDate = Math.abs(days - bD) + day; 
