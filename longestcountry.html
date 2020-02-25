@@ -16,13 +16,11 @@
       // alert(`${countries[2]}`);
       // alert(`${countries[2].length}`);
 
-      for(let i = 0 ; i < n ; i++){
-        for(let j = i + 1 ; j < n ; j++){
-          if(countries[i].length >= countries[j].length){
-            longest = countries[i];
-          }else{
-            longest = countries[j];
-          }
+      for(let i = 0 ; i < n-1 ; i++){
+        if(countries[i].length >= countries[i+1].length){
+          longest = countries[i];
+        }else{
+          longest = countries[i+1];
         }
       }
       alert(`The longest country name is ${longest}`);
